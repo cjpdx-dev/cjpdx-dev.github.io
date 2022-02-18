@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay Methods</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body>
+    <script src="pay_methods.js"></script>
+
+    <h1>CookNooks: Database Interface</h1>
+
+    <nav>
+      <ul>
+        <li> <a href="index.html"> Home Page </a> </li>
+        |
+        <li> <a href="customers.html">Customers</a> </li>
+        |
+        <li> <a href="addresses.html">Addresses</a> </li>
+        |
+        <li> <a href="customer-addresses.html"> Customer Addresses </a></li>
+        |
+        <li> <a href="orders.html"> Orders </a> </li>
+        |
+        <li> <a href="order-items.html"> Order Items </a></li>
+        |
+        <li> <a href="shipments.html"> Shipments </a> </li>
+        |
+        <li> <a href="products.html"> Products </a> </li>
+        |
+        <li> <a href="product-prices.html"> Product Prices </a> </li>
+        |
+        <li> <a href="transactions.html"> Transactions </a> </li>
+        |
+        <li> <a href="pay-methods.html"> Pay Methods </a> </li>
+        |
+        <li> <a href="customer-pay-methods.html"> Customer Pay Methods </a></li>
+    </ul>
+    </nav>
+
+    <main>
+      <h2>Pay Methods</h2>
+    </main>
+
+    <form>
+      <h3>Create a Payment Method:</h3>
+      
+      <label for="payment">Payment Method Information:</label><br /><br />
+      <label for="customerid">Customer ID</label>
+      <br>
+      <input type="text" id="customerid" name="customerid" required />
+      <br /><br />
+      <label for="fname">First Name</label>
+      
+      <br>
+
+      <input type="text" id="fname" name="fname" required /><br /><br />
+      <label for="lname">Last Name</label>
+      
+      <br>
+
+      <input type="text" id="lname" name="lname" required /><br /><br />
+      <label for="cardnum">Card Number</label>
+      
+      <br>
+
+      <input type="number" id="cardnum" name="cardnum" required /><br /><br />
+      <label for="expdate">Experation Date</label>
+      
+      <br>
+
+      <select id="expireMM" name="expireMM" required>
+        <option value="">Month</option>
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+      
+      <select id="expireYY" name="expireYY" required>
+        <option value="">Year</option>
+        <option value="22">2022</option>
+        <option value="23">2023</option>
+        <option value="24">2024</option>
+        <option value="25">2025</option>
+        <option value="26">2026</option></select>
+        
+        <br /><br />
+      
+      <label for="address1">Address 1:</label><br />
+      <input
+        type="text"
+        required="customer_id"
+        id="address"
+        name="address"
+      /><br />
+      
+      <label for="address2">Address 2:</label><br />
+      <input type="text" id="address" name="address" /><br />
+      
+      <label for="address_city">City:</label><br />
+      <input type="text" id="address_city" name="address_city" /><br />
+      
+      <label for="address_state">State:</label><br />
+      <input type="text" id="address_state" name="address_state" /><br />
+      
+      <label for="address_zip">Zip Code:</label><br />
+      <input type="text" id="address_zip" name="address_zip" /><br /><br />
+
+      <button type="submit">Submit</button> <br /><br />
+      <h3>Search for Payment Method:</h3>
+      
+      <input
+        type="text"
+        required="customer_id, payment_id"
+        id="search_payment"
+        name="search_payment"
+        value="PaymentID"
+      />
+      
+      <br>
+      <br>
+      
+      <button type="button">Search For Pay Method</button><br /><br />
+    
+    </form>
+
+    <p>[If Found: Payment Method Appears Here]</p>
+
+    <h3>Delete This Payment Method?</h3>
+    <button type="button">Delete</button>
+  </body>
+</html>

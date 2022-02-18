@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Prices</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  
+  <body>
+    <script src="product_prices.js"></script>
+
+    <h1> CookNooks: Database Interface </h1>
+
+    <nav>
+      <ul>
+        <li> <a href="index.html"> Home Page </a> </li>
+        |
+        <li> <a href="customers.html">Customers</a> </li>
+        |
+        <li> <a href="addresses.html">Addresses</a> </li>
+        |
+        <li> <a href="customer-addresses.html"> Customer Addresses </a></li>
+        |
+        <li> <a href="orders.html"> Orders </a> </li>
+        |
+        <li> <a href="order-items.html"> Order Items </a></li>
+        |
+        <li> <a href="shipments.html"> Shipments </a> </li>
+        |
+        <li> <a href="products.html"> Products </a> </li>
+        |
+        <li> <a href="product-prices.html"> Product Prices </a> </li>
+        |
+        <li> <a href="transactions.html"> Transactions </a> </li>
+        |
+        <li> <a href="pay-methods.html"> Pay Methods </a> </li>
+        |
+        <li> <a href="customer-pay-methods.html"> Customer Pay Methods </a></li>
+    </ul>
+    </nav>
+
+    <main>
+      <h2>Item Prices</h2>
+
+      <h3> Select Item Prices </h3>
+
+      <div class="itemprices-select-prices-wrapper">
+
+        <form class="itemprices-select-item-id-form">
+          <input type="text" id="search-input" name="search-input" value="Product ID">
+          <br>
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+  
+        <table class="itemprices-prices-query-table">
+          <tr>
+            <th>Line</th>
+            <th>PriceID</th>
+            <th>Price</th>
+            <th>Date Active</th>
+            <th>Date Inactive</th>
+          </tr>
+  
+          <tr>
+            <td>1</td>
+            <td>417</td>
+            <td>12.99</td>
+            <td>2021/07/05 11:59:59</td>
+            <td>Current</td>
+          </tr>
+  
+          <tr>
+            <td>2</td>
+            <td>418</td>
+            <td>13.99</td>
+            <td>2021/05/012 11:59:59</td>
+            <td>2021/07/05 11:59:58</td>
+          </tr>
+        </table>
+      
+        <br>
+        
+        <form>
+          <label for="item-price-set-new">New Price</label>
+          <br>
+          <br>
+          <input type="text" id="item-price-set-new" name="item-price-set-new">
+          <input type="submit" value="Save Price">
+        </form>
+
+      </div>
+
+    </main>
+
+  </body>
+
+  <footer>
+    <p> 
+      *Note* 
+      <br> 
+      We don't want database users to be able to edit or delete instances
+      of price history. Only look ups and new prices.
+    </p>
+  </footer>
+
+</html>
